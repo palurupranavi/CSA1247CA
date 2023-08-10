@@ -1,0 +1,46 @@
+#include<stdio.h>
+int main()
+{
+	int a,b,choice,res;
+	float performance_measure,re,counter =1.00,ins;
+	printf("Enter number 1:");
+	scanf("%d",&a);
+	counter = counter+1;
+	printf("Enter number 2:");
+	scanf("%d",&b);
+	counter = counter +1;
+	printf("1-Addition:\n2-Subtraction:\n3-Multiplication:\n4-Division:");
+	scanf("%d",&choice);
+	switch(choice)
+	{
+		case 1: printf("Performing addition\n");
+				res = a+b;
+				printf("add:%d",res);
+				counter = counter+1;
+				break;
+		case 2: printf("Performing subtraction\n");
+				res = a-b;
+				printf("subtraction:%d",res);
+				counter = counter+1;
+				break;
+		case 3: printf("Performing Multiplication\n");
+				res = a*b;
+				printf("multiplication:%d",res);
+				counter = counter+1;
+				break;
+		case 4: printf("Performing Division\n");
+				re = a/b;
+				printf("division:%d",re);
+				counter = counter+1;
+				break;
+		default: printf("Wrong input");
+				 break;
+	}
+	printf("The cycle value is:%f\n",counter);
+	printf("Enter the number of instructions:");
+	scanf("%f",&ins);
+	performance_measure = ins/counter;
+	printf("The performance measure is:%.2f\n",performance_measure);
+	return 0;
+	
+}
